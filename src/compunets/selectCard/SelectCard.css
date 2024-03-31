@@ -1,0 +1,49 @@
+.select-card {
+  border: 3px solid whitesmoke;
+  border-radius: var(--border-radios);
+  padding: 20px;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.select-card.deactivated {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.select-card.deactivated button {
+  cursor: not-allowed;
+  background-color: var(--Dark-gray);
+}
+.select-card__header {
+  display: flex;
+  justify-content: space-between;
+}
+.select-card__header__title {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+.select-card__header__pledge {
+  color: var(--Moderate-cyan);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.select-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.select-card__footer__row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.select-card__footer__row .left {
+  font-weight: bold;
+  font-size: 1.5rem;
+}

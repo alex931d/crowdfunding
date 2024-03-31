@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Commissioner", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+:root {
+  /* Primary */
+
+  --Moderate-cyan: hsl(176, 50%, 47%);
+  --Dark-cyan: hsl(176, 72%, 28%);
+
+  /* Neutral */
+
+  --Black: hsl(0, 0%, 0%);
+  --Dark-gray: hsl(0, 0%, 48%);
+
+  /* Typography */
+
+  --Main-font-size: 0.95rem;
+  --main-title-font-size: 2rem;
+  --secound-title-font-size: 1.7rem;
+  --third-title-font-size: 1.5rem;
+  --Secoundary-font-size: 1.4rem;
+
+  /* other */
+
+  --border-radios: 12px;
+  --gap: 20px;
+  --padding-around: 30px;
+}
+body {
+  background-color: whitesmoke;
+}
+.secoundary-title {
+  font-size: var(--third-title-font-size);
+}
+.secoundary {
+  line-height: 1.3rem;
+}
+.input {
+  border-radius: 25px;
+  width: 80px;
+  min-height: 40px;
+  display: flex;
+  gap: 2px;
+  padding-right: 2px;
+  align-items: center;
+  align-items: center;
+  border: 2px solid var(--Moderate-cyan);
+}
+.input input {
+  width: 100%;
+  border: none;
+  height: 40px;
+  font-size: 1.1rem;
+  border-radius: 5px 25px 25px 5px;
+}
+.input input:focus-visible {
+  outline: none;
+}
+.input span {
+  margin-left: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--Dark-gray);
+}
+.btn {
+  width: 160px;
+  min-height: 40px;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  background-color: var(--Dark-cyan);
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: 700;
+  transition: all 0.1s ease-in-out;
+}
+.btn:hover {
+  background-color: var(--Moderate-cyan);
+}
+.third-title {
+  font-size: var(--Secoundary-font-size);
+  font-weight: bold;
+}
+.forth-title {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+.secoundary {
+  color: var(--Dark-gray);
+  font-size: var(--Main-font-size);
+}
+.main {
+  color: var(--Black);
+}
+.centerlized {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.crowdfunding-main {
+  width: 100%;
+  min-height: 100vh;
+}
+.crowdfunding-main__inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.crowdfunding-main__inner header {
+  min-height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 30vh;
+  max-height: 470px;
+  background-image: url(./assets/image-hero-desktop.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.crowdfunding-main__inner main {
+  min-height: 70vh;
+  width: 100%;
+  background-color: whitesmoke;
+}
+.main-container {
+  width: 100%;
+  height: 100%;
+}
+.main-container__inner {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.crowdfund-card {
+  max-width: 650px;
+  width: 60%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -8%);
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-radius: var(--border-radios);
+}
+
+@media screen and (max-width: 700px) {
+  .dialog {
+    width: 90% !important;
+  }
+  .crowdfund-card {
+    width: 85%;
+  }
+  .crowdfund-stats {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .crowdfund-stats .crowdfund-stats__column {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .select-card__header {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .select-card .select-card__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .crowdfund-card__header__first__row .bookmark {
+    width: auto;
+    padding: 0;
+  }
+  .crowdfund-card__header__first .crowdfund-card__header__first__row {
+    justify-content: center;
+    gap: 7px;
+  }
+  .bookmark span {
+    display: none;
+  }
+  .option__inner__row__last-item__header
+    .option__inner__row__last-item__header__first {
+    flex-direction: column;
+    gap: 7px;
+    align-items: flex-start;
+  }
+  .option__inner__row__footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .option__inner__row__footer span {
+    margin-top: 10px;
+  }
+  .btn {
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .crowdfund-card {
+    transform: translate(-50%, -5%);
+  }
+}

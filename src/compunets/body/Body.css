@@ -1,0 +1,24 @@
+.crowdfund-card__body {
+  padding: var(--padding-around);
+  background-color: white;
+  border-radius: var(--border-radios);
+}
+.crowdfund-card__body__about {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+.crowdfund-card__body__about p {
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+  word-spacing: 20%;
+  word-break: keep-all;
+}
+.crowdfund-card__body__options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
